@@ -39,4 +39,5 @@ button {
 
 #content-extractor textarea[readonly] {
     background-color: #f4f4f4;
+    height: 400px;
 }
