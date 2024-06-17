@@ -1,3 +1,31 @@
+// 初始时隐藏所有工具部分，只显示第一个
+document.addEventListener('DOMContentLoaded', function() {
+    var toolSections = document.querySelectorAll('.tool-section');
+    toolSections.forEach(function(section) {
+        section.style.display = 'none';
+    });
+    toolSections[0].style.display = 'block'; // 显示第一个工具部分
+});
+
+// 切换工具显示的函数
+function showTool(toolId) {
+    var toolSections = document.querySelectorAll('.tool-section');
+    toolSections.forEach(function(section) {
+        section.style.display = 'none';
+    });
+    document.getElementById(toolId).style.display = 'block';
+}
+
+// 为每个工具按钮添加事件监听器
+var toolButtons = document.querySelectorAll('#categories a');
+toolButtons.forEach(function(button, index) {
+    button.addEventListener('click', function(event) {
+        event.preventDefault(); // 阻止链接的默认行为
+        var toolId = this.getAttribute('href').substring(1); // 获取href属性中的ID
+        showTool(toolId);
+    });
+});
+
 function formatJSON() {
     var input = document.getElementById('json-input').value;
     try {
@@ -21,3 +49,4 @@ function extractSubtitleContent() {
         alert('请输入有效的JSON字符串');
     }
 }
+
