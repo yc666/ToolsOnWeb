@@ -1,0 +1,42 @@
+body {
+    display: flex;
+}
+
+#sidebar {
+    width: 200px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+#content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* 之前的 CSS 样式... */
+
+#content-extractor textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+#content-extractor button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#content-extractor textarea[readonly] {
+    background-color: #f4f4f4;
+}
